@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
     text-align: center;
     margin: 0px;
@@ -31,4 +32,11 @@ a{
 }
 a:hover{
     cursor: pointer;
+}
+.Titulo{
+    padding: 15px;
+    background: #400B24;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
 }

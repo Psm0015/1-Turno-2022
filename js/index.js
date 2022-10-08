@@ -10,11 +10,12 @@ ajax.onload = function(){
     const divs=[]
     //console.log(obj.cand[0])
     for(var p = 0;p<(obj.cand.length);p++){
+        chave=("candidato="+obj.cand[p].nm);
         prc=(obj.cand[p].pvap).replace(",",".");
         if (p%2 === 0){
-            divs.push("<a href='estados.html' class='c1'>"+obj.cand[p].nm+"<br>"+obj.cand[p].n+"<div class='cc'>"+obj.cand[p].cc+"</div><div class='barra'><div style='width: "+prc+"%;'>"+obj.cand[p].pvap+"%</div></div>"+"</a>")
+            divs.push("<a onclick='pegaNm("+obj.cand[p].nm+")' href='estados.html?"+chave+"' class='c1'>"+obj.cand[p].nm+"<br>"+obj.cand[p].n+"<div class='cc'>"+obj.cand[p].cc+"</div><div class='barra'><div style='width: "+prc+"%;'>"+obj.cand[p].pvap+"%</div></div>"+"</a>")
         } else {
-            divs.push("<a href='estados.html' class='c2'>"+obj.cand[p].nm+"<br>"+obj.cand[p].n+"<div class='cc'>"+obj.cand[p].cc+"</div><div class='barra'><div style='width: "+prc+"%;'>"+obj.cand[p].pvap+"%</div></div>"+"</a>")
+            divs.push("<a onclick='pegaNm("+obj.cand[p].nm+")' href='estados.html?"+chave+"' class='c2'>"+obj.cand[p].nm+"<br>"+obj.cand[p].n+"<div class='cc'>"+obj.cand[p].cc+"</div><div class='barra'><div style='width: "+prc+"%;'>"+obj.cand[p].pvap+"%</div></div>"+"</a>")
         }
     }
     /*for(var p = 0;p<(obj.cand.length);p++){
